@@ -1,1 +1,1 @@
-Basic starter website with minimal functionality.
+Basic starter website using HTML, CSS, and Javascript.
