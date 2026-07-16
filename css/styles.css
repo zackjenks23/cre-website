@@ -1,0 +1,656 @@
+/*
+    Author: Zack Jenks
+    Date: 07/17/2026
+    File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, h2, h3, div, img, p, section, ul, li, hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for filling the entire viewport (no empty space) */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style rule for responsive images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules specific to mobile viewport */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+/* Styles rules for header */
+header {
+    background-color: #30323D;
+    padding: 5%;
+    align-content: center;
+}
+
+.website-icon {
+    max-width: 30%;
+    background-color: #4D5061;
+    margin: 0 auto;
+    padding: 0.5em;
+    border-radius: 80px;
+    box-shadow: 3px 3px 15px #000;
+}
+
+/* Styles rule for nav */
+nav {
+    background-color: #30323D;
+}
+
+/* Styles rules specific to mobile nav */
+.mobile-nav a {
+    color: #ccc;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 2.5em;
+}
+
+#menu-links {
+    display: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px #000;
+}
+
+/* Style rules for main */
+main {
+    background-color: #CDD1C4;
+    font-size: 1.1em;
+    font-family: "PT Serif", serif;
+    flex: 1;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    padding: 4%;
+}
+
+.page-subtitle {
+    font-size: 1.2em;
+    padding: 2% 4%;
+}
+
+main p {
+    padding: 2% 4%;
+}
+
+main a {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+}
+
+main hr {
+    border: 2px groove #000;
+    background-color: #4D5061;
+    margin: 2% 2% 0 2%;
+}
+
+/* home page specific */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.hero-text h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.hero-text p {
+    font-size: 1em;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.section-divider {
+    margin-bottom: 1.5%;
+}
+
+.cta-heading {
+    text-align: center;
+    padding: 2%;
+}
+
+.call-to-action {
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+/* event page specific */
+.events-container {
+    padding: 2%;
+}
+
+.events-month {
+    margin-bottom: 1.5em;
+}
+
+.month-events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.events-month h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 1%;
+}
+
+.event-title {
+    background-color: #E8C547;
+    border-radius: 10px 10px 0 0;
+    padding: 2% 4%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 4px solid #30323D;
+    box-shadow: 5px 5px 10px #30323D;
+}
+
+.event-title::after {
+    content: "+";
+    float: right;
+}
+
+.event-box[open] .event-title::after {
+    content: "−";
+}
+
+.event-description {
+    background-color: #5C80BC;
+    border-radius: 0 0 10px 10px;
+    padding: 2%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #000;
+    border: 4px solid #30323D; 
+    box-shadow: 5px 5px 10px #30323D;
+}
+
+.event-item {
+    padding: 2%;
+}
+
+/* image page specific */
+.recent-images h2 {
+    text-align: left;
+    font-size: 1.5em;
+    padding-left: 2%;
+}
+
+.image-archive {
+    padding: 2%;
+}
+
+.image-month {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.image-month-title {
+    background-color: #5C80BC;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2% 4%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: 4px solid #30323D;
+    box-shadow: 5px 5px 10px #30323D;
+    cursor: pointer;
+}
+
+.image-month-title::after {
+    content: "+";
+    float: right;
+}
+
+.image-month[open] .image-month-title::after {
+    content: "−";
+}
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 2%;
+}
+
+.img-gallery {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.base-img {
+    border: 3px solid #5C80BC;
+    border-radius: 10px;
+    margin: auto auto;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.base-img:hover {
+    transform: scale(1.05);
+}
+
+.img-hr {
+    margin-bottom: 15px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Style rules for footer */
+footer {
+    text-align: center;
+    color: #CDD1C4;
+    background-color: #30323D;
+    padding: 0.1em 0;
+    font-family: "PT Serif", serif;
+}
+
+footer p {
+    margin: 0.3em;
+    font-size: 0.8em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #CDD1C4;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px) {
+    
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rules for header area */
+    #top-container {
+        display: flex;
+    }
+
+    #top-container header {
+        display: flex;
+        flex: 0.4;
+        margin: 0;
+        padding: 1em;
+        color: #ccc;
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+    }
+
+    .website-name {
+        font-size: 1.1em;
+        width: 6ch;
+        margin: auto 0;
+        padding: 0 2em;
+    }
+
+    .website-icon {
+        max-width: 100%;
+        width: 100px;
+        margin: auto 0;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    #top-container nav {
+        display: flex;
+        flex: 0.6;
+        justify-content: flex-end;
+        padding-right: 2em;
+    }
+
+    nav ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 2%;
+        padding: 0 0 1em 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2em;
+    }
+
+    nav li {
+        font-size: 1.5em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        padding: 0.5em;
+        background-color: #4D5061;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px #000;
+        text-shadow: 3px 3px 15px #000;
+    }
+
+    nav li a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+    }
+
+    /* Tablet Viewport: Style rules for main area */
+    .page-title {
+        font-size: 2.5em;
+        padding: 1.25%;
+    }
+
+    .page-subtitle {
+        font-size: 1.3em;
+    }
+    
+    .cta-heading {
+        font-size: 1.6em;
+    }
+
+    main p {
+        font-size: 1.2em;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 4em;
+    }
+
+    .hero-text p {
+        font-size: 2em;
+    }
+
+    .call-to-action {
+        font-size: 1.5em;
+    }
+
+    .img-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .base-img {
+        width: 250px;
+    }
+
+    .img-hr {
+        margin-bottom: 20px;
+    }
+
+    /* Tablet Viewport: Style rules for footer area */
+    footer {
+        font-size: 1em;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px) {
+
+    /* Desktop Viewport: Style rules for header area */
+
+    /* Desktop Viewport: Style rules for nav area */
+    nav li {
+        font-size: 2em;
+        padding: 0.66em;
+    }
+
+    nav li a:hover {
+        transform: translateY(-2px);
+        text-decoration: underline;
+    }
+
+    /* Desktop Viewport: Style rules for main area */
+    .page-title {
+        font-size: 3em;
+        padding: 1.5%;
+    }
+
+    .page-subtitle {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .cta-heading {
+        font-size: 2.4em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    main p {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .hero-text h1 {
+        font-size: 4.5em;
+    }
+
+    .hero-text p {
+        font-size: 2.5em;
+    }
+
+    .call-to-action {
+        font-size: 2em;
+    }
+
+    .events-month h2, .recent-images h2 {
+        font-size: 2em;
+        padding-left: 1em;
+    }
+
+    .month-events {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-title {
+        font-size: 1.6em;
+    }
+
+    .event-description {
+        padding: 2%;
+    }
+
+    .img-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .base-img {
+        width: 300px;
+        border-width: 6px;
+        margin-bottom: 1em;
+    }
+
+    .img-hr {
+        margin-bottom: 30px;
+    }
+
+    /* Desktop Viewport: Style rules for footer area */
+    footer p {
+        font-size: 1em;
+    }
+
+    .email-link:hover {
+        color: #5C80BC;
+    }
+}
+
+/* Media Query for Large Viewports */
+@media screen and (min-width: 2000px) {
+
+    /* Large Viewport: Style rules for header area */
+    .website-name {
+        font-size: 2em;
+    }
+
+    .website-icon {
+        width: 150px;
+    }
+
+    /* Large Viewport: Style rules for nav area */
+    nav ul {
+        margin: 2em;
+    }
+
+    nav li {
+        font-size: 3em;
+    }
+
+    /* Large Viewport: Style rules for main area */
+    .page-title {
+        font-size: 4em;
+        padding: 1%;
+    }
+
+    .page-subtitle {
+        font-size: 2em;
+        padding-bottom: 1.25em;
+    }
+
+    .cta-heading {
+        font-size: 3.4em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main p {
+        font-size: 2em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .hero {
+        height: 800px;
+    }
+
+    .hero-text h1 {
+        font-size: 7em;
+    }
+
+    .hero-text p {
+        font-size: 5em;
+    }
+
+    .call-to-action {
+        font-size: 3em;
+    }
+
+    .events-month h2, .recent-images h2 {
+        font-size: 3em;
+    }
+
+    .event-title {
+        font-size: 2em;
+    }
+
+    .event-description {
+        font-size: 1em;
+    }
+
+    .image-month-title {
+        font-size: 2em;
+    }
+
+    .img-gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .base-img {
+        width: 500px;
+    }
+
+    .img-hr {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    /* Large Viewport: Style rules for footer area */
+    footer {
+        font-size: 1.5em;
+    }
+}
